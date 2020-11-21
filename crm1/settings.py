@@ -82,21 +82,20 @@ WSGI_APPLICATION = 'crm1.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        '''
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "demo_1",
-        "USER": "mohamed_lamselk",
-        "PASSWORD": "Tawba2015",
-        "HOST": "database-1.cb10nv8uehut.us-east-2.rds.amazonaws.com",
-        "PORT": "5432",
-        '''
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # "ENGINE": "django.db.backends.postgresql",
+        # "NAME": "demo_1",
+        # "USER": "mohamed_lamselk",
+        # "PASSWORD": "",
+        # "HOST": "database-1.cb10nv8uehut.us-east-2.rds.amazonaws.com",
+        # "PORT": "5432",
     }
 }
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES["default"].update(db_from_env)
+
+# import dj_database_url
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES["default"].update(db_from_env)
 
 
 # Password validation
